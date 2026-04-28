@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Übung 1</title>
 </head>
 <body>
     
@@ -17,6 +17,13 @@
 <h1>2. Semester</h1> 
 <table>
       <thead>
+      <tr>
+  <th>Modulnr.</th>
+  <th>Modulname</th>
+  <th>LP</th>
+  </tr>
+  
+  
 <tr>
   <td>B21</td>
   <td>Programmierung 2</td>
@@ -52,7 +59,7 @@
 <p><a href="http://127.0.0.1:3000/Uebungen/Uebung1/index.html?vscode-livepreview=true"> Zurück zur Startseite</a></p>
     </main>
     <footer>
-        Lara Sophie Suter
+       <span> Lara Sophie Suter</span>
      </footer>
 
     </body>
