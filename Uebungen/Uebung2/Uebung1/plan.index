@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+       
+ <img src="./bilder/fiw.jpg" alt="Bild der HTW" />
+    <span>WebTech 2026</span>
+    </header>
+
+    <main>
+<h1>2. Semester</h1> 
+<table>
+      <thead>
+<tr>
+  <th>Modulnr.</th>
+  <th>Modulname</th>
+  <th>LP</th>
+  </tr>
+  <tr>
+  <td>B21</td>
+  <td>Programmierung 2</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>B22</td>
+  <td>Mathematik 2</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td>B23</td>
+  <td>Software-Engineering 1</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>B24</td>
+  <td>Webtechnologien</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>B25</td>
+  <td>BWL 2: Rechnungswesen</td>
+  <td>5</td>
+</tr>
+<tr>
+  <td>B26</td>
+  <td>1. Fremdsprache 2</td>
+  <td>4</td>
+</tr>
+</tbody>
+    </table>
+<p><a href="http://127.0.0.1:3000/Uebungen/Uebung1/index.html?vscode-livepreview=true"> Zurück zur Startseite</a></p>
+    </main>
+    <footer>
+        Lara Sophie Suter
+     </footer>
+
+    </body>
+
+</html>
