@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../styles/mystyles.css">
     <title>Übung 1</title>
 </head>
 <body>
@@ -57,7 +58,7 @@
 <p><a href="http://127.0.0.1:3000/Uebungen/Uebung1/index.html?vscode-livepreview=true"> Zurück zur Startseite</a></p>
     </main>
     <footer>
-        Lara Sophie Suter
+       <span>Lara Sophie Suter</span> 
      </footer>
 
     </body>

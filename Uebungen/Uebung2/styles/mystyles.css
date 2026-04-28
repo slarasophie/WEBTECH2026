@@ -1,5 +1,3 @@
-header{
-    text-decoration: "Verdana";
-    background-color:422;
-    grid-template-columns: 
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
