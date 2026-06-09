@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="meta data">
+  <meta name="keywords" content="HTML, head, title, meta, link, style">
+  <meta name="author" content="Jörn Freiheit">
+  <meta http-equiv="refresh" content="30">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mystyle.css">
+  <style>
+    body {background-color: #29e0e6;}        
+    h1 {color: #ff6a3b;}        
+    ul {color: #0000ff;}
+  </style>
+  <script>
+    function myFunction() { 
+      document.getElementById("demo").innerHTML = "Hallo FIW!";        
+    }
+  </script>
+  <base href="localhost/Webtech20" target="_blank">
+  <title>Metadaten</title>
+</head>
+
+</body>
+</html>

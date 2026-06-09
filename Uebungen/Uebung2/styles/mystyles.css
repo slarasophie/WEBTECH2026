@@ -1,3 +1,57 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+header{
+    background-color: gray;
+color: white;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+header  img{
+width: 2em;
+padding: 1%;
+}
+
+ul{
+    list-style: none;
+}
+
+ul>li{
+    border: 
+}
+
+ #indexmain{
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+ main>aside{
+    background-color: aqua;
+    padding: 5%;
+    display: grid;
+    text-align: center;
+    grid-template-rows: 1fr 1fr;
+
+  
+    a{
+        margin: auto;
+
+    }
+
+    img{
+        width: 50%;
+        
+    }
+
+    table{
+        box-shadow: green 0px 5px 15px;
+    }
+ }
+span{
+    text-align: right;
+    padding: 1%;               
+         }

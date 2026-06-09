@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Übung 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="container">
+  <h1 class="my-5">Teilnehmerin Registrierung</h1>
+
+  <div class="row">
+
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="firstName" placeholder="First name">
+        <label for="firstName">First name</label>
+        <div class="valid-feedback">
+        Danke!
+        </div>
+
+        <div class="invalid-feedback">
+        Vorname erforderlich!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="lastName" placeholder="Last name">
+        <label for="lastName">Last name</label>
+       
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="emailID" placeholder="E-Mail">
+        <label for="emailID">E-Mail</label>
+      
+   
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="form-floating mb-3 col">
+        <input type="text" class="form-control" id="lastName" placeholder="IP address">
+        <label for="lastName">IP address</label>
+        
+     
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col d-grid gap-2">
+      <button type="button" class="btn btn-secondary">Abbrechen</button>
+    </div>
+    <div class="col d-grid gap-2">
+      <button type="button" class="btn btn-success" onclick="register()">Registrieren</button>
+    </div>
+  </div>
+
+  <h2 class= "mt-5">Eingebene Werte</h2>
+
+  <ul class ="list-group" id="inputList">
+
+  </ul>
+
+  <script>
+function register(){
+    console.log('Button Registrieren geklickt');
+
+    let inputFirstName = document.querySelector('#firstName');
+    console.log('inputFirstName : ' , inputFirstName);
+    let inputFirstNameValue = inputFirstName.value;
+    console.log('value von inputFirstName : ', inputFirstNameValue);
+
+
+    if(inputFirstNameValue == ""){
+    inputFirstName.classList.add('is-invalid')
+      inputFirstName.classList.remove('is-valid')
+}
+else
+{
+      inputFirstName.classList.add('is-valid')
+        inputFirstName.classList.remove('is-invalid')
+
+}
+
+
+let allInputs = document.querySelectorAll('input')
+console.log('allInputs : ' , allInputs)
+
+for(index = o; index < allInputs.length; index++)
+{
+    if(allInputs[index].value == "")
+{
+    allInputs[index].classList.add('is-invalid')
+      allInputs[index].classList.remove('is-valid')
+}
+else
+{
+      allInputs[index].classList.add('is-valid')
+        allInputs[index].classList.remove('is-invalid')
+}
+}
+/*
+   
+    let inputLastName = document.querySelector('#lasttName');
+    console.log('inputLastName : ' , inputLastName);
+    let inputLastNameValue = inputLastName.value;
+    console.log('value von inputLastName : ', inputLastNameValue);
+
+
+
+    let resultList = document.querySelector('#inputList')
+    resultList.innerHTML = `<li class="list-group- item">Vorname : ${inputFirstNameValue}</li>`;
+*/
+    }
+  </script>
+
+</body>
+
+
+</html>
+
+
