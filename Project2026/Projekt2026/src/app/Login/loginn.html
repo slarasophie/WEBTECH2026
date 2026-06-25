@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+ <header class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <nav class="navbar bg-body-tertiary fixed-top" style="">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">kleine Lieblinge</a>
+     
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+   
+    </header>
+</head>
+
+<body>
+<style>
+   
+    footer {
+    ul {
+  display: flex;
+  gap: 1rem;
+}
+
+@layer presentation {
+  body {
+    background: khaki;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+  }
+  
+  ul {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding-inline: 0;
+    padding: 1rem;
+  }
+  
+  li {
+    list-style: none;
+    
+    a {
+      color: black;
+    }
+  }
+}
+    }
+    .mb-3{
+      display: center;
+margin-top: 3%;
+gap;
+    
+     
+
+      
+
+    }
+</style>
+
+<body>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ 
+    <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Benutzername</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="z.B. hellogirl55"
+    aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Passwort</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="z.B. 12345678">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+<footer>
+  <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Login</a></li>
+  <li><a href="#">Über uns</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</footer>
+</html>
