@@ -1,67 +1,26 @@
-
-<body>
-<style>
-   
-    footer {
-    ul {
-  display: flex;
-  gap: 1rem;
-}
-
-@layer presentation {
-  body {
-    background: khaki;
-    display: grid;
-    height: 100vh;
-    place-items: center;
-  }
-  
-  ul {
-    border: 1px solid black;
-    border-radius: 8px;
-    padding-inline: 0;
-    padding: 1rem;
-  }
-  
-  li {
-    list-style: none;
-    
-    a {
-      color: black;
-    }
-  }
-}
-    }
-    .mb-3{
-      display: center;
-margin-top: 3%;
-
-    
-     
-
-      
-
-    }
-</style>
-
-
-    <form>
-  <div class="mb-3">
+<div class="container">
+  <div class="row mb-3">
     <label for="exampleInputEmail1" class="form-label">Benutzername</label>
+    <div class="col-sm-10">
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="z.B. hellogirl55"
     aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text"></div>
   </div>
-  <div class="mb-3">
+  </div>
+  <div class="row mb-3">
     <label for="exampleInputPassword1" class="form-label">Passwort</label>
+      <div class="col-sm-10">
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="z.B. 12345678">
   </div>
-  <div class="mb-3 form-check">
+</div>
+  <div class="mb-3  ">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <div class="col-sm-10">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</body>
+
+</div>
 
 
