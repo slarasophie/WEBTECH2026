@@ -7,10 +7,11 @@ import { Main } from './main/main';
 import { Impresum } from './Impresum/impresum';
 import { Login } from './Login/login';
 import { Registration } from './registration/registration';
+import { Contact } from './contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Nav, Footer, Main, Impresum, Login, Registration],
+  imports: [RouterOutlet, Header, Nav, Footer, Main, Impresum, Login, Contact, Registration],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

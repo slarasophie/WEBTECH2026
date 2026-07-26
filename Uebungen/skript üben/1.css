@@ -1,0 +1,71 @@
+header {
+    background-color: bisque;
+    text-align: center;
+    text
+    margin: auto;
+    color: aqua;
+}
+
+li{
+    color: aquamarine;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    /* alle links */
+    text-decoration: none;
+}
+
+a:link{ /*noch nicht angeklickt*/
+color: red;
+}
+
+a:visited{
+    /* bereits angeklickt*/
+    color:darkgray;
+}
+
+a:hover {
+    /* mouse over*/
+    color:limegreen;
+}
+
+a:active{
+    /* wird gerade angeklickt*/
+    color: lightblue;
+}
+table{
+/*unterschiedliche Spaltenfarben*/
+td:nth-child(even){
+    background-color: lightgrey;
+}
+td:nth-child(odd){
+    background-color: darkgray;
+}
+
+/*unterschidliche Zeilenfarben*/
+tr:nth-child(even){
+    background-color: white;
+}
+
+tr:nth-child(odd){
+    background-color: grey;
+}}
+
+.fiw{
+    width: 320px;
+    padding:10px;
+    border:5px solid gray;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+p::first-letter {
+    font-size:300%;
+}
+p::first-line {
+    font-weight: bold;
+}
