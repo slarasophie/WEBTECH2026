@@ -1,7 +1,6 @@
-footer {
-   
-  display: flex;
-  
-  gap: 1rem;
 
-}
+   ul{
+  display: flex;
+  background-color: rgb(221, 237, 177);
+  gap: 1rem;
+   }

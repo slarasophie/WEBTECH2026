@@ -9,11 +9,12 @@ import { Detail } from './detail/detail';
 import { Home } from './home/home';
 import { Nav } from './nav/nav';
 import { Table } from './table/table';
+import { Contact } from './contact/contact';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Login, Registration, Create, Detail, Home, Nav, Table],
+  imports: [RouterOutlet, Header, Footer, Login, Contact, Registration, Create, Detail, Home, Nav, Table],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
