@@ -1,0 +1,99 @@
+/* Bootstrap als Basis-Framework */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* ==========================================================================
+   FitTrack – Farbschema: Beige / Schwarz / Braun
+   ========================================================================== */
+:root {
+  --color-beige: #f3ead9;
+  --color-beige-dark: #e6d8bd;
+  --color-beige-muted: #cbb995;
+  --color-brown: #6b4423;
+  --color-brown-light: #8a5a30;
+  --color-brand-light: #c98f4e;
+  --color-black: #211a14;
+  --color-text: #2b221a;
+
+  --bs-primary: var(--color-brown);
+  --bs-primary-rgb: 107, 68, 35;
+  --bs-body-bg: var(--color-beige);
+  --bs-body-color: var(--color-text);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-beige);
+  color: var(--color-text);
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+/* Buttons im Markenlook */
+.btn-brand {
+  background-color: var(--color-brown);
+  border-color: var(--color-brown);
+  color: var(--color-beige);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--color-brown-light);
+  border-color: var(--color-brown-light);
+  color: #fff;
+}
+
+.btn-outline-brand {
+  color: var(--color-brown);
+  border-color: var(--color-brown);
+  background-color: transparent;
+}
+
+.btn-outline-brand:hover {
+  background-color: var(--color-brown);
+  color: var(--color-beige);
+}
+
+a {
+  color: var(--color-brown);
+}
+
+a:hover {
+  color: var(--color-brown-light);
+}
+
+/* Karten im Markenlook */
+.card-brand {
+  background-color: #fff;
+  border: 1px solid var(--color-beige-dark);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(33, 26, 20, 0.08);
+}
+
+.badge-category {
+  background-color: var(--color-beige-dark);
+  color: var(--color-brown);
+  font-weight: 500;
+}
+
+.page-title {
+  color: var(--color-black);
+  border-bottom: 3px solid var(--color-brown);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-footer {
+  background-color: var(--color-black);
+  color: var(--color-beige-muted);
+}
+
+/* Formulare */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-brown);
+  box-shadow: 0 0 0 0.2rem rgba(107, 68, 35, 0.25);
+}

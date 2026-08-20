@@ -1,0 +1,107 @@
+<div class="container">
+  @if (loading()) {
+    <div class="text-center py-5">
+      <span class="spinner-border"></span>
+    </div>
+  } @else if (exercise(); as ex) {
+    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+      <div>
+        <h1 class="page-title h3 mb-1">{{ ex.name }}</h1>
+        <span class="badge badge-category rounded-pill">{{ ex.category }}</span>
+      </div>
+      <div class="d-flex gap-2">
+        <a class="btn btn-outline-brand btn-sm" [routerLink]="['/exercises', ex._id, 'edit']">Bearbeiten</a>
+        <a class="btn btn-outline-danger btn-sm" [routerLink]="['/exercises', ex._id, 'delete']">Löschen</a>
+        <a class="btn btn-outline-secondary btn-sm" routerLink="/exercises">Zur Liste</a>
+      </div>
+    </div>
+
+    @if (ex.description) {
+      <p class="mb-4">{{ ex.description }}</p>
+    }
+
+    @if (errorMessage()) {
+      <div class="alert alert-danger">{{ errorMessage() }}</div>
+    }
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-5">
+        <div class="card-brand p-3">
+          <h2 class="h5 mb-3">Trainingseinheit tracken</h2>
+          <form [formGroup]="logForm" (ngSubmit)="addLog()" novalidate>
+            <div class="row g-2 mb-2">
+              <div class="col-4">
+                <label class="form-label small">Sätze</label>
+                <input type="number" class="form-control" formControlName="sets" min="1" />
+              </div>
+              <div class="col-4">
+                <label class="form-label small">Wdh.</label>
+                <input type="number" class="form-control" formControlName="reps" min="1" />
+              </div>
+              <div class="col-4">
+                <label class="form-label small">Gewicht (kg)</label>
+                <input type="number" class="form-control" formControlName="weightKg" min="0" step="0.5" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small">Notiz (optional)</label>
+              <input type="text" class="form-control" formControlName="notes" />
+            </div>
+            <button type="submit" class="btn btn-brand w-100" [disabled]="savingLog()">
+              @if (savingLog()) {
+                <span class="spinner-border spinner-border-sm me-2"></span>
+              }
+              Eintragen
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7">
+        <h2 class="h5 mb-3">Verlauf ({{ ex.logs.length }})</h2>
+
+        @if (ex.logs.length === 0) {
+          <p class="text-body-secondary">Noch keine Trainingseinheiten getrackt.</p>
+        } @else {
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Datum</th>
+                  <th>Sätze</th>
+                  <th>Wdh.</th>
+                  <th>Gewicht</th>
+                  <th>Notiz</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (log of sortedLogs(ex); track log._id) {
+                  <tr>
+                    <td>{{ log.date | date: 'dd.MM.yyyy HH:mm' }}</td>
+                    <td>{{ log.sets ?? '–' }}</td>
+                    <td>{{ log.reps ?? '–' }}</td>
+                    <td>{{ log.weightKg ?? '–' }} kg</td>
+                    <td>{{ log.notes || '–' }}</td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        (click)="removeLog(log._id)"
+                        aria-label="Eintrag entfernen"
+                      >
+                        ✕
+                      </button>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        }
+      </div>
+    </div>
+  } @else if (errorMessage()) {
+    <div class="alert alert-danger">{{ errorMessage() }}</div>
+  }
+</div>

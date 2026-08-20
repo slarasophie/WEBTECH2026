@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+    <h1 class="page-title h3 mb-0">Meine Übungen</h1>
+    <a routerLink="/exercises/new" class="btn btn-brand">+ Neue Übung</a>
+  </div>
+
+  <div class="row g-2 mb-4">
+    <div class="col-12 col-md-6">
+      <input
+        type="search"
+        class="form-control"
+        placeholder="Übung suchen…"
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearchChange()"
+        aria-label="Übungen suchen"
+      />
+    </div>
+    <div class="col-8 col-md-4">
+      <select
+        class="form-select"
+        [(ngModel)]="selectedCategory"
+        (ngModelChange)="onSearchChange()"
+        aria-label="Kategorie filtern"
+      >
+        <option value="">Alle Kategorien</option>
+        @for (cat of categories; track cat) {
+          <option [value]="cat">{{ cat }}</option>
+        }
+      </select>
+    </div>
+    <div class="col-4 col-md-2">
+      <button type="button" class="btn btn-outline-brand w-100" (click)="resetFilters()">
+        Zurücksetzen
+      </button>
+    </div>
+  </div>
+
+  @if (loading()) {
+    <div class="text-center py-5">
+      <span class="spinner-border text-brown"></span>
+    </div>
+  } @else if (errorMessage()) {
+    <div class="alert alert-danger">{{ errorMessage() }}</div>
+  } @else if (exercises().length === 0) {
+    <div class="card-brand p-4 text-center">
+      <p class="mb-0">Keine Übungen gefunden. Lege deine erste Übung an!</p>
+    </div>
+  } @else {
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+      @for (exercise of exercises(); track exercise._id) {
+        <div class="col">
+          <div class="card-brand h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h2 class="h5 mb-0">{{ exercise.name }}</h2>
+              <span class="badge badge-category rounded-pill">{{ exercise.category }}</span>
+            </div>
+            @if (exercise.description) {
+              <p class="small text-body-secondary mb-2">{{ exercise.description }}</p>
+            }
+            <p class="small mb-3">
+              {{ totalLogs(exercise) }} Trainingseinheit(en) getrackt
+            </p>
+
+            <div class="mt-auto d-flex flex-wrap gap-2">
+              <a class="btn btn-sm btn-outline-brand" [routerLink]="['/exercises', exercise._id]">
+                Details &amp; Tracking
+              </a>
+              <a class="btn btn-sm btn-outline-brand" [routerLink]="['/exercises', exercise._id, 'edit']">
+                Bearbeiten
+              </a>
+              <a class="btn btn-sm btn-outline-danger" [routerLink]="['/exercises', exercise._id, 'delete']">
+                Löschen
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

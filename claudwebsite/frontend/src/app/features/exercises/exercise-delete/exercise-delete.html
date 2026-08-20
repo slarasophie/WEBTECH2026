@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card-brand p-4">
+        <h1 class="page-title h3 text-danger">Übung löschen</h1>
+
+        @if (loading()) {
+          <div class="text-center py-4">
+            <span class="spinner-border"></span>
+          </div>
+        } @else if (exercise(); as ex) {
+          <p>
+            Soll die Übung <strong>„{{ ex.name }}"</strong> inklusive aller
+            {{ ex.logs.length }} getrackten Trainingseinheit(en) unwiderruflich gelöscht werden?
+          </p>
+
+          @if (errorMessage()) {
+            <div class="alert alert-danger py-2">{{ errorMessage() }}</div>
+          }
+
+          <div class="d-flex gap-2">
+            <button
+              type="button"
+              class="btn btn-danger"
+              [disabled]="deleting()"
+              (click)="confirmDelete()"
+            >
+              @if (deleting()) {
+                <span class="spinner-border spinner-border-sm me-2"></span>
+              }
+              Endgültig löschen
+            </button>
+            <a routerLink="/exercises" class="btn btn-outline-brand">Abbrechen</a>
+          </div>
+        } @else if (errorMessage()) {
+          <div class="alert alert-danger">{{ errorMessage() }}</div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

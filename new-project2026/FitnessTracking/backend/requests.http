@@ -1,0 +1,22 @@
+### Status-Check
+GET http://localhost:3000/
+
+### Verbindungsstatus zu MongoDB
+GET http://localhost:3000/health
+
+### Alle Workouts abrufen
+GET http://localhost:3000/api/workouts
+
+### Neues Workout anlegen
+POST http://localhost:3000/api/workouts
+Content-Type: application/json
+
+{
+  "title": "Morgenlauf",
+  "type": "Laufen",
+  "duration": 30,
+  "caloriesBurned": 250
+}
+
+### Workout löschen (ID aus der GET-Antwort oben einsetzen)
+DELETE http://localhost:3000/api/workouts/HIER_ID_EINSETZEN

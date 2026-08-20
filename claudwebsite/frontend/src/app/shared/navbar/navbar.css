@@ -1,0 +1,20 @@
+.app-navbar {
+  background-color: var(--color-black);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.app-navbar .navbar-brand,
+.app-navbar .nav-link {
+  color: var(--color-beige);
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link.active {
+  color: var(--color-brand-light);
+}
+
+.text-nav-muted {
+  color: var(--color-beige-muted);
+  font-size: 0.9rem;
+}
