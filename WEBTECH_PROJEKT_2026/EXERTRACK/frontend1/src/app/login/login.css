@@ -1,0 +1,10 @@
+.auth-container {
+  max-width: 960px;
+  min-height: calc(100dvh - 260px);
+  display: flex;
+  align-items: center;
+}
+
+.auth-container > .row {
+  width: 100%;
+}
