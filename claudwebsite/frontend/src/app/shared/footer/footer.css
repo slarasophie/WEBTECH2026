@@ -1,0 +1,14 @@
+.app-footer {
+  background-color: var(--color-black);
+  color: var(--color-beige-muted);
+}
+
+.app-footer a {
+  color: var(--color-beige-muted);
+  font-weight: 500;
+  text-transform: none;
+}
+
+.app-footer a:hover {
+  color: var(--color-accent);
+}

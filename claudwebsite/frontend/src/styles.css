@@ -1,23 +1,31 @@
 /* Bootstrap als Basis-Framework */
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
 /* ==========================================================================
-   FitTrack – Farbschema: Beige / Schwarz / Braun
+   FitTrack – einfaches Farbschema (Grün als Hauptfarbe, Terracotta als Akzent)
    ========================================================================== */
 :root {
-  --color-beige: #f3ead9;
-  --color-beige-dark: #e6d8bd;
-  --color-beige-muted: #cbb995;
-  --color-brown: #6b4423;
-  --color-brown-light: #8a5a30;
-  --color-brand-light: #c98f4e;
-  --color-black: #211a14;
-  --color-text: #2b221a;
+  --color-beige: #f6f4e8;
+  --color-beige-dark: #e4ddc5;
+  --color-beige-muted: #1d3124;
+  --color-brown: #bacec1;
+  --color-brown-light: #d6e4dc;
+  --color-brand-light: #1d3124;
+  --color-accent: #c47563;
+  --color-accent-dark: #a66354;
+  --color-black: #bacec1;
+  --color-text: #1d3124;
+
+  --font-display: Arial, Helvetica, sans-serif;
+  --font-heading: Arial, Helvetica, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
 
   --bs-primary: var(--color-brown);
-  --bs-primary-rgb: 107, 68, 35;
+  --bs-primary-rgb: 186, 206, 193;
   --bs-body-bg: var(--color-beige);
   --bs-body-color: var(--color-text);
+  --bs-body-font-family: var(--font-body);
 }
 
 html,
@@ -28,21 +36,37 @@ body {
 body {
   background-color: var(--color-beige);
   color: var(--color-text);
-  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  font-family: var(--font-body);
 }
 
-/* Buttons im Markenlook */
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+h2, h3 {
+  font-weight: 700;
+}
+
+.btn {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-family: var(--font-display);
+}
+
+/* Buttons – einfache Bootstrap-Grundform, nur mit eigenen Farben */
 .btn-brand {
-  background-color: var(--color-brown);
-  border-color: var(--color-brown);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent-dark);
   color: var(--color-beige);
 }
 
 .btn-brand:hover,
 .btn-brand:focus {
-  background-color: var(--color-brown-light);
-  border-color: var(--color-brown-light);
-  color: #fff;
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: var(--color-beige);
 }
 
 .btn-outline-brand {
@@ -53,47 +77,57 @@ body {
 
 .btn-outline-brand:hover {
   background-color: var(--color-brown);
-  color: var(--color-beige);
+  color: var(--color-text);
 }
 
 a {
-  color: var(--color-brown);
-}
-
-a:hover {
-  color: var(--color-brown-light);
-}
-
-/* Karten im Markenlook */
-.card-brand {
-  background-color: #fff;
-  border: 1px solid var(--color-beige-dark);
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 10px rgba(33, 26, 20, 0.08);
-}
-
-.badge-category {
-  background-color: var(--color-beige-dark);
-  color: var(--color-brown);
+  color: var(--color-accent-dark);
   font-weight: 500;
 }
 
-.page-title {
-  color: var(--color-black);
-  border-bottom: 3px solid var(--color-brown);
-  display: inline-block;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1.5rem;
+a:hover {
+  color: var(--color-accent);
 }
 
-.app-footer {
-  background-color: var(--color-black);
-  color: var(--color-beige-muted);
+/* Karten – einfacher Rahmen */
+.card-brand {
+  background-color: #fbf6ec;
+  border: 1px solid var(--color-beige-dark);
+  border-top: 3px solid var(--color-accent);
+  border-radius: 0.3rem;
+}
+
+.badge-category {
+  background-color: var(--color-brown);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.4em 0.75em;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-weight: 700;
+  border-bottom: 3px solid var(--color-accent);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Formulare */
 .form-control:focus,
 .form-select:focus {
-  border-color: var(--color-brown);
-  box-shadow: 0 0 0 0.2rem rgba(107, 68, 35, 0.25);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.2rem rgba(79, 128, 168, 0.25);
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
 }

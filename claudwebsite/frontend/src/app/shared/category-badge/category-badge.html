@@ -1,0 +1,15 @@
+@switch (category()) {
+  @case ('Kraft') {
+    <i class="bi bi-lightning-fill me-1"></i>
+  }
+  @case ('Ausdauer') {
+    <i class="bi bi-heart-pulse-fill me-1"></i>
+  }
+  @case ('Mobilitaet') {
+    <i class="bi bi-arrows-move me-1"></i>
+  }
+  @default {
+    <i class="bi bi-three-dots me-1"></i>
+  }
+}
+{{ category() }}
